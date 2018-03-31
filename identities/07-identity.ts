@@ -1,13 +1,13 @@
-import {NumberSwitchReducer} from '../src/app/reducers/number-switch.reducer';
-import {Store} from '../src/app/core/store';
-import {IncrementAction} from '../src/app/actions/increment.action';
-import {AdditionAction} from '../src/app/actions/addition.action';
-import {DecrementAction} from '../src/app/actions/decrement.action';
+import { NumberSwitchReducer } from '../src/app/reducers/number-switch.reducer';
+import { IncrementAction } from '../src/app/actions/increment.action';
+import { AdditionAction } from '../src/app/actions/addition.action';
+import { DecrementAction } from '../src/app/actions/decrement.action';
+import { VanillaStore } from '../src/app/core/vanilla-store';
 
-const store = new Store<number>(NumberSwitchReducer, 0);
+const store = new VanillaStore<number>(NumberSwitchReducer, 0);
 
 const unsubscribe = store.subscribe(() => {
-  console.log('subscribed: ', store.state);
+    console.log('subscribed: ', store.state);
 });
 
 store.dispatch(IncrementAction);

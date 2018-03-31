@@ -3,7 +3,7 @@ import {IAction} from './i-action';
 import {IListerCallback} from './i-lister-callback';
 import {IUnsubscribeCallback} from './i-unsubscribe-callback';
 
-export class Store<TItem> {
+export class VanillaStore<TItem> {
   private _state: TItem;
   private _listeners: IListerCallback[] = [];
 

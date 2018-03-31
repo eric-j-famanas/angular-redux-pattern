@@ -1,4 +1,4 @@
-import {IAction} from './i-action';
+import { IAction } from './i-action';
 
 
 export interface IReducer<TItem> {

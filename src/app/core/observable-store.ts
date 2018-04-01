@@ -20,6 +20,7 @@ export class ObservableStore<TItem> extends BehaviorSubject<TItem> {
             .subscribe((state) => super.next(state));
     }
 
+
     public get state(): TItem {
         return this.value;
     }

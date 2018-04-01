@@ -1,5 +1,5 @@
-import { IReducer } from './i-reducer';
-import { IAction } from './i-action';
+import { IReducer } from '../models/i-reducer';
+import { IAction } from '../models/i-action';
 import { Subject } from 'rxjs/Subject';
 import { scan } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';

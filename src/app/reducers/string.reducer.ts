@@ -1,6 +1,7 @@
-import {IAction} from '../core/i-action';
-import {IReducer} from '../core/i-reducer';
+import {IAction} from '../core/models/i-action';
+import {IReducer} from '../core/models/i-reducer';
 
 export const StringReducer: IReducer<string> = (state: string, action: IAction) => {
   return state;
-}
+};
+

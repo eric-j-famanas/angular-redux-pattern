@@ -1,5 +1,5 @@
-import {IReducer} from '../core/i-reducer';
-import {IAction} from '../core/i-action';
+import {IReducer} from '../core/models/i-reducer';
+import {IAction} from '../core/models/i-action';
 
 export const NumberSwitchReducer: IReducer<number> = (state: number, action: IAction) => {
   switch (action.type) {

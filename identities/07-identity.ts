@@ -1,8 +1,8 @@
 import { NumberSwitchReducer } from '../src/app/reducers/number-switch.reducer';
-import { IncrementAction } from '../src/app/actions/increment.action';
-import { AdditionAction } from '../src/app/actions/addition.action';
-import { DecrementAction } from '../src/app/actions/decrement.action';
-import { VanillaStore } from '../src/app/core/vanilla-store';
+import { IncrementAction } from '../src/app/actions/number/increment.action';
+import { AdditionAction } from '../src/app/actions/number/addition.action';
+import { DecrementAction } from '../src/app/actions/number/decrement.action';
+import { VanillaStore } from '../src/app/core/stores/vanilla-store';
 
 const store = new VanillaStore<number>(NumberSwitchReducer, 0);
 

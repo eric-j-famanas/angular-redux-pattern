@@ -1,7 +1,7 @@
-import {IReducer} from './i-reducer';
-import {IAction} from './i-action';
-import {IListerCallback} from './i-lister-callback';
-import {IUnsubscribeCallback} from './i-unsubscribe-callback';
+import {IReducer} from '../models/i-reducer';
+import {IAction} from '../models/i-action';
+import {IListerCallback} from '../models/i-lister-callback';
+import {IUnsubscribeCallback} from '../models/i-unsubscribe-callback';
 
 export class VanillaStore<TItem> {
   private _state: TItem;

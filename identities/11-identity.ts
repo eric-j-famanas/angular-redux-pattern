@@ -3,6 +3,7 @@ import { IMessagingAppState } from '../src/app/core/models/i-messaging-app-state
 import { AddMessage } from '../src/app/actions/messages/add-message.function';
 import { IAddMessageAction } from '../src/app/actions/messages/i-add-message-action';
 import { IDeleteMessageAction } from '../src/app/actions/messages/i-delete-message-action';
+import { DeleteMessage } from '../src/app/actions/messages/delete-message.function';
 
 
 /**
@@ -21,7 +22,7 @@ const reducer: Reducer<IMessagingAppState> =
                     messages: state.messages.concat((<IAddMessageAction>action).message),
                 };
             case 'DELETE_MESSAGE':
-                let idx = (<IDeleteMessageAction>action).index;
+                const idx = (<IDeleteMessageAction>action).index;
                 return {
                     messages: [
                         ...state.messages.slice(0, idx),
@@ -43,4 +44,7 @@ store.dispatch(AddMessage('Would not have no other kind but silk.'));
 
 store.dispatch(AddMessage('Has it really got a team of snow white horses?'));
 
+store.dispatch(DeleteMessage(1));
+
 console.log(store.getState());
+
